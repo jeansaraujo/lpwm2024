@@ -4,27 +4,35 @@
 <!-- Estrutura Básica Tabela > Linha Coluna -->
 <!-- table>tr>td -->
 <style>
+    table{
+        width: 100%;
+    }
     td{
-        border: 1px solid red;
+        border: 1px solid gray;
         text-align: center;
     }
+    tbody > tr:nth-child(even){
+        background-color: #f2f2f2;
+    }
 </style>
-<table >
-    <tr>
-        <td>Jean</td>
-        <td>M</td>
-        <td colspan="2">Analise de Sistemas</td>
-    </tr>
-    <tr>
-        <td>F</td>
-        <td>Inglesa</td>
-        <td>IFPE</td>
-        <td>UFAPE</td>
-        <td>UPE</td>
-    </tr>
-</table>
-
+<!--
+    <table >
+        <tr>
+            <td>Jean</td>
+            <td>M</td>
+            <td colspan="2">Analise de Sistemas</td>
+        </tr>
+        <tr>
+            <td>F</td>
+            <td>Inglesa</td>
+            <td>IFPE</td>
+            <td>UFAPE</td>
+            <td>UPE</td>
+        </tr>
+    </table>
+-->
 <!--table>(tr>td{txt $}*5)*10-->
+<!--
 <table>
     <tr>
         <td>txt 1</td>
@@ -95,7 +103,9 @@
         <td>txt 5</td>
     </tr>
 </table>
+-->
 <!--table>(thead>tr>td{campo}*3).tbody>(tr>td{dado}*3)*4.tfood>tr>(td{rodape})*3-->
+<!--
 <table>
     <thead>
         <tr>
@@ -133,4 +143,85 @@
         </tr>
     </tfood>
     </tr>
+</table>
+-->
+
+
+<!--
+    Continuidade tabelas
+-->
+<table>
+    <tr>
+        <td>Col</td><td>Col</td><td>Col</td>
+    </tr>
+    <tr>
+        <td colspan="2">Col</td><td>Col</td>     
+    </tr>
+    <tr>
+        <td>Col</td><td rowspan="3">Col</td><td rowspan="2">Col</td>
+    </tr>
+    <!--
+        tr>td{Col}*2    
+    -->
+    <tr>
+        <td>Col</td>
+    </tr>       
+    <tr>
+        <td rowspan="2">Col</td><td>Col</td>
+    </tr>
+    <tr>
+        <td colspan="2">Col</td>
+    </tr>
+    <tr>
+        <td>Col</td><td>Col</td><td>Col</td>
+    </tr>
+</table>
+<!--
+Tags Semânticas para indicar Cabeçalho/Conteúdo/Rodapé de Tabela.
+Internamente funciona os tr/td da mesma forma!    
+-->
+<br><br><br>
+<!-- 3 Quebras de Linhas para descer tabela-->
+<table>
+    <thead style="background-color: lightgreen">
+        <!--tr>td{Atleta}+td{Esporte}+td{Número}-->
+        <tr>
+            <td>Atleta</td>
+            <td>Esporte</td>
+            <td>Número</td>
+        </tr>
+    </thead>
+    <tbody>
+        <!--
+            (tr>td*3{info})*4
+        -->
+        <tr>
+            <td>Alicia</td>
+            <td>Jiu</td>
+            <td>10</td>
+        </tr>
+        <tr>
+            <td>Alicia</td>
+            <td></td>
+            <td>10</td>
+        </tr>
+        <tr>
+            <td>Jamisson</td>
+            <td>Atletismo</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>Zé</td>
+            <td>Xadrez</td>
+            <td>100</td>
+        </tr>
+    </tbody>
+    <tfoot style="background-color: darkgreen; color:white;">
+        <tr>
+            <td>IFPE Garanhuns</td>
+            <td colspan="2">
+                Lista dos Atletas - Jogos 2024 - 3º TIM
+            </td>
+        </tr>
+    </tfoot>
 </table>
