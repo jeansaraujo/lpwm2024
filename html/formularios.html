@@ -1,6 +1,77 @@
-<form>
+<!-- 
+    Forma de enviar dados para serem tratados
+-->
+<!--
+    action é um atributo do form que indica para onde será enviado os dados dos campos do formulário, caso não exista o action, os dados serão tratados na própria página
+-->
+<style>
+    label,button{
+        display: block;
+    }   
+</style>
+<!--
+    Atributos
+       -> action: o local onde os dados serão tratatos
+       -> method: a "estrada" por onde os dados trafegarão
+             GET - informação irá pela URL - params 
+             POST - informação não irá pela URL - outros 
+        -> enctype:
+            - text/plain só segue textos
+            - multipart/form-data segue texto e binários
+-->
+<form method="POST" enctype="multipart/form-data">
+    <!-- Label está associado a um input-->
     <label>
-        Texto
+        Nome
     </label>
-    <input type="text" autocapitalize="ON">
+    <input type="text" name="nome">
+    <!-- Tem vários tipos de input, o padrão é text que refere-se a um texto -->
+    <label>Cor Predileta</label>
+    <input type="color" name="corPredileta">
+    <label>Email</label>
+    <input type="email" name="email">
+    <label>Altura</label>
+    <input type="number" name="altura">
+    <label>Gostos</label>
+    <span>
+        Café: 
+    </span>
+    <input type="checkbox" name="cafe" value="cafe">
+    <span>
+        Chocolate: 
+    </span>
+    <input type="checkbox" name="chocolate" value="chocolate" checked>
+    <label>Sexo</label>
+    <span>
+        Masculino: 
+    </span>
+    <input type="radio" name="sexo" value="m">
+    <span>
+        Feminino: 
+    </span>
+    <input type="radio" name="sexo" value="f">
+    <span>
+        Não Informado: 
+    </span>
+    <input type="radio" name="sexo" value="nao" checked>
+    <label>
+        Estado
+    </label>
+    <select name="estado">
+        <option value="PE">Pernambuco</option>
+        <option value="BA" selected>Bahia</option>
+        <option value="SE">Sergipe</option>
+        <option value="PB">Paraiba</option>
+    </select>
+    <label>
+        Nascimento
+    </label>
+    <input type="date" name="nascimento">
+    <label>Senha</label>
+    <input type="password" name="senha">
+    <label>Foto</label>
+    <input type="file" name="foto">
+    <button>
+        Enviar
+    </button>
 </form>
