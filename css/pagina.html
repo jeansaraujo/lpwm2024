@@ -1,0 +1,52 @@
+<!--
+    Em regra, toda tem um estilo padrão. Salvo algumas exceções, por exemplo <span> que não tem nenhum estilo
+
+    E o estilo pode ser alterado, acrescentando ou modificando seus valores iniciais
+    
+    Para fazer isso, temos 3 formas:
+     Prioridade 1) INLINE: dentro da tag pelo atributo STYLE
+     Prioridade 2) TAG STYLE: dentro do arquivo pelo tag STYLE
+     Prioridade 3) Link: fora do arquivo HTML linkando a arquivo CSS
+    
+     Com um pequeno grandioso detalhe, pode-se utilizar !important após para alterar ordem de prioridade
+
+     Pode utilizar o ID e CLASS para aplicar estilo a um conjunto de elementos ou a um elemento especifico independente da tag 
+-->
+
+<!--
+    Seletores do CSS: São as formas para selecionar um elemento na página para aplicar o estilo. Por padrão, aplicamos a uma TAG, só podemos também aplicar a eventos de TAGS, propriedades ou valores de propriedades de TAGS
+-->
+
+<link rel="stylesheet" href="estilo.css">
+<style>
+    p{
+        border-top: double green 2px;
+        text-align: right;
+        background-color: blue!important;
+    }
+    p:hover{
+        color: yellow !important;
+        border-bottom: 6px solid red;
+        text-align: left;
+    }
+    a{
+        display: block;
+    }
+    .invisivel{
+        display: none;
+    }
+    #fontezao{
+        font-size:60px;
+    }   
+</style>
+
+<p class="invisivel" style="color:red; font-size: 30px; font-style: italic; font-weight: bold; background-color: pink!important;">
+    ♥♥♥♥♥♥ Turma Linda ♥♥♥♥♥♥ 
+</p>
+
+<h1>
+    Buscadores
+</h1>
+<a id="fontezao" href="http://www.google.com" target="_blank">Ir ao Google</a>
+
+<a class="invisivel" href="http://www.bing.com" target="_blank">Ir ao Bing</a>
